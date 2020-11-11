@@ -1,4 +1,4 @@
-package flowcontrol;
+package com.siit.flowcontrol;
 
 import java.util.Scanner;
 

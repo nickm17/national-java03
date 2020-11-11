@@ -1,4 +1,4 @@
-package primitives;
+package com.siit.primitives;
 
 public class IntegerOperations {
 
@@ -13,6 +13,7 @@ public class IntegerOperations {
         System.out.println(a + b); // operatie matematica
         System.out.println("a + b = " + a + b); // concatenare cu un String
 
+        var i = Integer.parseInt("1");
         char c = 'a';
         char c1 = 'a';
         short s = 2;
@@ -25,13 +26,13 @@ public class IntegerOperations {
         String string = "";
         byte byte1 = 1;
         short sh = 2;
-        int result = sh + sh; // pentru short, byte , char rezultatul operatiilor este int
+        int resultRenamed = sh + sh; // pentru short, byte , char rezultatul operatiilor este int
         int result2 = byte1 * sh;
 
         long l = 1234563L;
         long l1 = 1234563l;
 
-        long l2 = result + l; // rezultatul este de tipul cel mai mare
+        long l2 = resultRenamed + l; // rezultatul este de tipul cel mai mare
 
         float f = 1234563.3232F;
         float f1 = 1234563.33f;

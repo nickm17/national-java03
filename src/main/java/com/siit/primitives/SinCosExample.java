@@ -1,4 +1,4 @@
-package primitives;
+package com.siit.primitives;
 
 import java.util.Scanner;
 
