@@ -43,58 +43,59 @@ public class SwitchEx {
         System.out.println("introduceti operatia dorita pentru cele doua numere");
         String operatie = sc.next();
 
-        switch (operatie) {
-            case "+":
-                System.out.println("Suma numerelor este " + (n1 + n2));
-                break;
-            case "-":
-                System.out.println("Diferenta numerelor este " + (n1 - n2));
-                break;
-            case "*":
-                System.out.println("Produsul numerelor este " + (n1 * n2));
-                break;
-            case "/":
-                System.out.println(n1 + " Impartit la " + n2 + " este" + (n1 / n2));
-                break;
-            default:
-                System.out.println("Operatie necunoscuta");
-        }
+//        switch (operatie) {
+//            case "+":
+//                System.out.println("Suma numerelor este " + (n1 + n2));
+//                break;
+//            case "-":
+//                System.out.println("Diferenta numerelor este " + (n1 - n2));
+//                break;
+//            case "*":
+//                System.out.println("Produsul numerelor este " + (n1 * n2));
+//                break;
+//            case "/":
+//                System.out.println(n1 + " Impartit la " + n2 + " este" + (n1 / n2));
+//                break;
+//            default:
+//                System.out.println("Operatie necunoscuta");
+//        }
 
 
 
-        int result = calculate(n1, n2, operatie);
+        int result = Calculator.calculate(n1, n2, operatie);
         System.out.println("result = " + result);
     }
 
     /**
+     * This methods does arithmetic operations
      *
      * @param n1
      * @param n2
      * @param operatie
      * @return
      */
-    private static int calculate(int n1, int n2, String operatie) {
-        switch (operatie) {
-            case "+":
-                System.out.println("Suma numerelor este " + (n1 + n2));
-//                break;
-                return n1 + n2;
-            case "-":
-                System.out.println("Diferenta numerelor este " + (n1 - n2));
-//                break;
-                return n1 - n2;
-            case "*":
-                System.out.println("Produsul numerelor este " + (n1 * n2));
-//                break;
-                return n1 * n2;
-            case "/":
-                System.out.println(n1 + " Impartit la " + n2 + " este" + (n1 / n2));
-//                break;
-                return n1 / n2;
-            default:
-                System.out.println("Operatie necunoscuta");
-                return 0;
-        }
-    }
+//    public static int calculate(int n1, int n2, String operatie) {
+//        switch (operatie) {
+//            case "+":
+//                System.out.println("Suma numerelor este " + (n1 + n2));
+////                break;
+//                return n1 + n2;
+//            case "-":
+//                System.out.println("Diferenta numerelor este " + (n1 - n2));
+////                break;
+//                return n1 - n2;
+//            case "*":
+//                System.out.println("Produsul numerelor este " + (n1 * n2));
+////                break;
+//                return n1 * n2;
+//            case "/":
+//                System.out.println(n1 + " Impartit la " + n2 + " este" + (n1 / n2));
+////                break;
+//                return n1 / n2;
+//            default:
+//                System.out.println("Operatie necunoscuta");
+//                return 0;
+//        }
+//    }
 
 }
