@@ -1,0 +1,49 @@
+package com.siit.oop.javaoop2;
+
+public class PlayWithAnimals {
+
+
+    public static void main(String[] args) {
+
+        Dog dogReference = new Beagle();
+        Animal animalDogReference = dogReference; // cast automat, compilatorul stie ca Animal e superclasa
+
+
+        dogReference.createDog();
+        Beagle beagle = (Beagle) dogReference; // down-casting - aici trebuie sa facem cast explicit
+        beagle.createDog(1);
+
+        Domestic domesticReference = new Beagle();
+
+        domesticReference.play();
+
+        Dog dog = new Beagle();
+        dog.bark();
+        dog.breath();
+        dog.bite();
+
+        Animal animal = dog;
+        animal.breath();
+        animal.eat();
+
+        System.out.println(dog instanceof Domestic);
+        System.out.println(dog instanceof MarkerInterface);
+
+        Animal lion = new Lion();
+        doSomethingAnimal(beagle);
+        doSomethingAnimal(lion);
+        doSomethingDomestic(beagle);
+//        doSomethingDomestic(lion); bad, trebuie sa fie de tipul parametrului sau orice subtip
+    }
+
+
+    // metoda poate primi orice subtip al lui Domestic
+    public static void doSomethingDomestic (Domestic domestic) {
+
+    }
+
+    // metoda poate primi orice subtip al lui Animal
+    public static void doSomethingAnimal (Animal animal) {
+
+    }
+}
