@@ -18,6 +18,8 @@ public class PlayWithAnimals {
         domesticReference.play();
 
         Dog dog = new Beagle();
+        Beagle beagle1 = new Beagle();
+        beagle1.doarInBeagle();
         dog.bark();
         dog.breath();
         dog.bite();
@@ -32,6 +34,7 @@ public class PlayWithAnimals {
         Animal lion = new Lion();
         doSomethingAnimal(beagle);
         doSomethingAnimal(lion);
+        doSomethingAnimal(dog);
         doSomethingDomestic(beagle);
 //        doSomethingDomestic(lion); bad, trebuie sa fie de tipul parametrului sau orice subtip
     }

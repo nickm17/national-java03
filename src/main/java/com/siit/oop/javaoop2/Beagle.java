@@ -22,6 +22,10 @@ public class Beagle extends Dog {
         return new Beagle();
     }
 
+    public void doarInBeagle(){
+
+    }
+
     /**
      * Rules for method overriding
      *
@@ -34,7 +38,7 @@ public class Beagle extends Dog {
      * parent class, known as covariant return types.
      */
     @Override
-    Dog createDog() {
+    public Beagle createDog() {
 //        return super.createDog();
         return new Beagle();
     }

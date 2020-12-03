@@ -50,7 +50,7 @@ public class Dog extends Animal implements Domestic, MarkerInterface {
         System.out.println("Dog barking");
     }
 
-    Dog createDog(){
+    public Dog createDog(){
         System.out.println("Dog drinking");
         return new Dog("dog");
     }
