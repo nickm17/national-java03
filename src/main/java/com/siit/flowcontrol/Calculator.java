@@ -5,15 +5,15 @@ public class Calculator {
     /**
      * This methods does arithmetic operations
      */
-    public static int calculate(int n1, int n2, String operatie) {
+    public double calculate(double n1, double n2, String operatie) {
         switch (operatie) {
             case "+":
                 System.out.println("Suma numerelor este " + (n1 + n2));
 //                break;
-                Integer.parseInt(operatie);
+//                Integer.parseInt(operatie);
                 return n1 + n2;
             case "-":
-                System.out.println("Diferenta numerelor este " + (n1 - n2));
+                System.out.println("Diferenta noua numerelor este " + (n1 - n2));
 //                break;
                 return n1 - n2;
             case "*":

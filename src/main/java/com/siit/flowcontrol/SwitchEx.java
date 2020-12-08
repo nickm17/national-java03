@@ -43,27 +43,32 @@ public class SwitchEx {
         System.out.println("introduceti operatia dorita pentru cele doua numere");
         String operatie = sc.next();
 
-//        switch (operatie) {
-//            case "+":
-//                System.out.println("Suma numerelor este " + (n1 + n2));
-//                break;
-//            case "-":
-//                System.out.println("Diferenta numerelor este " + (n1 - n2));
-//                break;
-//            case "*":
-//                System.out.println("Produsul numerelor este " + (n1 * n2));
-//                break;
-//            case "/":
-//                System.out.println(n1 + " Impartit la " + n2 + " este" + (n1 / n2));
-//                break;
-//            default:
-//                System.out.println("Operatie necunoscuta");
-//        }
+        extracted(n1, n2, operatie);
 
 
+//        int result = new Calculator().calculate(n1, n2, operatie);
+//        System.out.println("result = " + result);
+    }
 
-        int result = Calculator.calculate(n1, n2, operatie);
-        System.out.println("result = " + result);
+    private static void extracted(int n1, int n2, String operatie) {
+        int result = 0;
+        switch (operatie) {
+            case "+":
+                System.out.println("Suma numerelor este " + (n1 + n2));
+                result = n1+n2;
+                break;
+            case "-":
+                System.out.println("Diferenta noua numerelor este " + (n1 - n2));
+                break;
+            case "*":
+                System.out.println("Produsul numerelor este " + (n1 * n2));
+                break;
+            case "/":
+                System.out.println(n1 + " Impartit la " + n2 + " este" + (n1 / n2));
+                break;
+            default:
+                System.out.println("Operatie necunoscuta");
+        }
     }
 
     /**
@@ -81,7 +86,7 @@ public class SwitchEx {
 ////                break;
 //                return n1 + n2;
 //            case "-":
-//                System.out.println("Diferenta numerelor este " + (n1 - n2));
+//                System.out.println("Diferenta noua numerelor este " + (n1 - n2));
 ////                break;
 //                return n1 - n2;
 //            case "*":
