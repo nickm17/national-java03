@@ -2,20 +2,26 @@ package com.siit.functions;
 
 public class Fibonacci {
 
-    public static int fibonacci(int n) {
+    public int fibonacci(int n) {
         System.out.println(n);
-        if (n == 0 || n == 1) {
-            return n;
-        }
+        Integer n1 = getInteger(n);
+        if (n1 != null) return n1;
         return fibonacci(n - 1) + fibonacci(n - 2);
 //        if (n == 1){
 //
 //        }
     }
 
+    private Integer getInteger(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
 
-        int result = fibonacci(10);
+        int result = new Fibonacci().fibonacci(10);
         System.out.println(result);
     }
 }

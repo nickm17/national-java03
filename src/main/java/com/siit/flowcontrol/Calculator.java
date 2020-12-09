@@ -2,13 +2,17 @@ package com.siit.flowcontrol;
 
 public class Calculator {
 
+    private SwitchEx switchEx;
+
     /**
      * This methods does arithmetic operations
      */
     public double calculate(double n1, double n2, String operatie) {
-        if (n1 == 3){
-            return 1;
+
+        if (n1 == 5.0) {
+            return switchEx.extracted(n1, n2 , operatie);
         }
+
         switch (operatie) {
             case "+":
                 System.out.println("Suma numerelor este " + (n1 + n2));

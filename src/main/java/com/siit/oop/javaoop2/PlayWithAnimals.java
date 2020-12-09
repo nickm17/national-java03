@@ -5,6 +5,16 @@ public class PlayWithAnimals {
 
     public static void main(String[] args) {
 
+        Animal [] animals = new Animal[10];
+        animals[0] = new Beagle();
+        animals[0] = new Beagle();
+        animals[0] = new Lion();
+        animals[0] = new Dolphin();
+
+        for(Animal animal : animals) {
+            animal.eat();
+        }
+
         Dog dogReference = new Beagle();
         Animal animalDogReference = dogReference; // cast automat, compilatorul stie ca Animal e superclasa
 

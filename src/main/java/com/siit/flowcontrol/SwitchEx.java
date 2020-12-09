@@ -43,20 +43,21 @@ public class SwitchEx {
         System.out.println("introduceti operatia dorita pentru cele doua numere");
         String operatie = sc.next();
 
-        extracted(n1, n2, operatie);
+        var switchEx = new SwitchEx();
+        switchEx.extracted(n1, n2, operatie);
 
 
 //        int result = new Calculator().calculate(n1, n2, operatie);
 //        System.out.println("result = " + result);
     }
 
-    private static void extracted(int n1, int n2, String operatie) {
+    public double extracted(double n1, double n2, String operatie) {
         int result = 0;
         switch (operatie) {
             case "+":
                 System.out.println("Suma numerelor este " + (n1 + n2));
-                result = n1+n2;
-                break;
+                return n1+n2;
+//                break;
             case "-":
                 System.out.println("Diferenta noua numerelor este " + (n1 - n2));
                 break;
@@ -69,6 +70,7 @@ public class SwitchEx {
             default:
                 System.out.println("Operatie necunoscuta");
         }
+        return 0;
     }
 
     /**

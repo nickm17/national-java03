@@ -1,5 +1,7 @@
 package com.siit.oop.constructors;
 
+import java.util.Objects;
+
 import lombok.ToString;
 
 @ToString
@@ -65,7 +67,24 @@ public class Car {
         return numberOfWheels;
     }
 
-//    @Override
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return speedInstanceVariable == car.speedInstanceVariable
+                && numberOfHorsePowerInstanceVariable == car.numberOfHorsePowerInstanceVariable
+                && numberOfWheels == car.numberOfWheels
+                && Objects.equals(nameInstanceVariable, car.nameInstanceVariable);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameInstanceVariable, speedInstanceVariable, numberOfHorsePowerInstanceVariable, numberOfWheels);
+    }
+
+
+    //    @Override
 //    public String toString() {
 //        return "Car{" +
 //                "nameInstanceVariable='" + nameInstanceVariable + '\'' +
