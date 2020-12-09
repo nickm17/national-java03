@@ -1,5 +1,6 @@
 package com.siit.oop.javaoop2;
 
+//@EqualsAndHashCode
 public class Beagle extends Dog {
 
 
@@ -41,5 +42,15 @@ public class Beagle extends Dog {
     public Beagle createDog() {
 //        return super.createDog();
         return new Beagle();
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
