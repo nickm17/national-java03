@@ -6,6 +6,11 @@ public class BubbleSort {
 
     public static void main(String[] args) {
 
+        int[][][] scores = {
+                {{3, 4}, {}, {3, 4}, {3, 4}},
+                {{3, 4}, {3, 4}}
+        };
+
         int[] arr = {2, 5, 8, 3, 6, 5, 5, 5};
         int[] arrFaraDuplicate = {2, 5, 8, 3, 6};
         System.out.print("Array inainte de sort " + Arrays.toString(arr));
