@@ -1,8 +1,51 @@
 package com.siit.flowcontrol;
 
+import java.awt.print.Book;
 import java.util.Arrays;
 
 public class ForEachEx {
+
+    private Book [] arrayOfBooks = new Book[10];
+
+    // getters / setters
+    public void importBooks(){
+        arrayOfBooks[0] = new Book();
+        arrayOfBooks[1] = new Book();
+        arrayOfBooks[0] = new Book();
+        arrayOfBooks[0] = new Book();
+        arrayOfBooks[0] = new Book();
+        arrayOfBooks[0] = new Book();
+
+    }
+
+    public void importOneBook(Book book){
+        arrayOfBooks[0] = book;
+    }
+
+    public Book[] deleteOneBookIfPresent(Book book){
+
+        // iterati
+
+        if (arrayOfBooks[0].equals(book)){
+            // retinem i si facem o copie a array-ului fara acel index/obiect
+            // sau setam la null
+        }
+        return null;
+    }
+
+    public void listBooks(){
+        for (Book book : arrayOfBooks) {
+//            System.out.println(book.printBook());
+            // if null, sari peste
+            System.out.println(book.toString());
+        }
+
+    }
+
+
+
+
+
 
     public static void main(String[] args) {
 //        int [] array = new int[3];
