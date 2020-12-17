@@ -1,6 +1,6 @@
 package com.siit.objectcontainers;
 
-public class Person {
+public class Person implements Comparable {
 
     public Person() {
     }
@@ -10,6 +10,11 @@ public class Person {
     }
 
     private String name;
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 
     public void setName(String name) {
         this.name = name;

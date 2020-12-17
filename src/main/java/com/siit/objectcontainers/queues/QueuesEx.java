@@ -3,6 +3,7 @@ package com.siit.objectcontainers.queues;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Queue;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ public class QueuesEx {
     public static void main(String[] args) {
 
         Deque<Employee> employeeQueue = new LinkedList<>();
-        Deque<Employee> arrayDeque = new ArrayDeque<>();
+        Queue<Employee> arrayDeque = new ArrayDeque<>();
 
         Employee employee1 = new Employee("Dorel", 12, 222222232);
         Employee employee2 = new Employee("Dorel", 12, 222222232);
