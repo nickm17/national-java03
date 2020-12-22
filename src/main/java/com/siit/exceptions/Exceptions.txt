@@ -1,0 +1,38 @@
+Unchecked Exceptions
+    ArithmeticException,
+    ArrayStoreException,
+    ClassCastException, ,
+    ConcurrentModificationException,
+    IllegalArgumentException,
+    IllegalStateException,
+    IndexOutOfBoundsException,
+    NegativeArraySizeException,
+    NoSuchElementException,
+    NullPointerException,
+    UncheckedIOException,
+    UnsortedOperationException
+    ArithmeticException Thrown by the JVM when code attempts to divide by zero
+    ArrayIndexOutOfBoundsException Thrown by the JVM when code uses an illegal index to access an array
+    IndexOutOfBoundsException
+    StringIndexOutOfBoundsException
+    ClassCastException Thrown by the JVM when an attempt is made to cast an excep-tion to a subclass of which it is not an instance
+    IllegalArgumentException Thrown by the programmer to indicate that a method has been passed an illegal or inappropriate argument
+    NullPointerException Thrown by the JVM when there is a null reference where an object is required
+    NumberFormatException Thrown by the programmer when an attempt is made to convert a string to a numeric type but the string doesn’t have an appropriate format
+
+Checked Exception
+
+    FileNotFoundException
+    IOException Thrown programmatically when there’s a problem reading or writing a file
+    SQLException
+    Exception
+
+
+Errors
+
+    ExceptionInInitializerError Thrown by the JVM when a static initializer throws
+    an exception and doesn’t handle it
+    StackOverflowError Thrown by the JVM when a method calls itself too many times
+    (this is called infinite recursion because the method typically calls itself without end)
+    NoClassDefFoundError Thrown by the JVM when a class that the code uses is available
+    at compile time but not runtime
