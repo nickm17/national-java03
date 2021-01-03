@@ -1,13 +1,19 @@
 package com.siit.exceptions;
 
+import com.siit.oop.wrapper.WrapperClassesEx;
+
 import lombok.extern.log4j.Log4j;
 
 @Log4j
 public class ExceptionsEx {
 
     public static void main(String[] args) {
+        System.out.println("in main");
+        new ExceptionInInitializerErrorExamples();
+
         try {
             ageInMonths(Integer.parseInt(args[0]));
+            new WrapperClassesEx();
         } catch (NumberFormatException | IndexOutOfBoundsException numberFormatExceptionReference) {
             System.out.println("first program argument needs to be an int:    " + numberFormatExceptionReference.getMessage());
         } catch (IllegalArgumentException e) {
