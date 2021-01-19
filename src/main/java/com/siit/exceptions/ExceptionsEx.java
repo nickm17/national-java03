@@ -2,9 +2,6 @@ package com.siit.exceptions;
 
 import com.siit.oop.wrapper.WrapperClassesEx;
 
-import lombok.extern.log4j.Log4j;
-
-@Log4j
 public class ExceptionsEx {
 
     public static void main(String[] args) {
