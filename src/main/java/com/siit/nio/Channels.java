@@ -12,7 +12,7 @@ public class Channels {
         Path path = Paths.get(first);
 
         FileChannel channel = FileChannel.open(path);
-        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        ByteBuffer buffer = ByteBuffer.allocate(1000);
         int bytesRead;
 
         while ((bytesRead = channel.read(buffer)) != -1) { // Reads a sequence of bytes from this channel into the given buffer

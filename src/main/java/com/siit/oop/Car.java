@@ -11,6 +11,7 @@ public class Car {
     private int speed;
 
     public Car() {
+
     }
 
     public Car(String color, String name, int speed) {

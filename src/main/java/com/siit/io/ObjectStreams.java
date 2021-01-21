@@ -19,6 +19,7 @@ public class ObjectStreams {
         Vaza vaza1 = new Vaza(28, "Vazawewqqwe" , 25.1, "Owazsdasdner");
         vaza1.color = "Rosu";
 
+
         writeVazaToFile(List.of(vaza1, vaza2));
         readVazaFromFile();
     }

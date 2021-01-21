@@ -2,6 +2,13 @@ package com.siit.oop.javaoop2;
 
 public class Cat extends Animal implements Domestic {
 
+    public Cat(){
+        System.out.println("cat");
+    }
+//    public Cat(String s){
+//        System.out.println(s);
+//    }
+
     /**
      * Rules for method overriding
      *

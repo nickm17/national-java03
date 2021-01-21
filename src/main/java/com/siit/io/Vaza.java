@@ -1,15 +1,16 @@
 package com.siit.io;
 
+import com.siit.oop.javaoop2.Cat;
+
 import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
-public class Vaza implements Serializable {
+public class Vaza extends Cat implements Serializable {
 
     public static String color;
 
@@ -20,6 +21,14 @@ public class Vaza implements Serializable {
     private double price;
 
     private transient String owner;// nu mai e serializat
+
+//    public Vaza(int size, String name, double price, String owner) {
+//        super(name);
+//        this.size = size;
+//        this.name = name;
+//        this.price = price;
+//        this.owner = owner;
+//    }
 
     @Override
     public String toString() {
