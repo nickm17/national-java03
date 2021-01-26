@@ -3,7 +3,7 @@ package com.siit.flowcontrol;
 import java.util.Scanner;
 
 /**
- * Exemple cu if
+ * ExempleSupplier cu if
  */
 public class IfElseEx {
 

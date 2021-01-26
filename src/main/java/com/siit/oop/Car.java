@@ -63,6 +63,10 @@ public class Car {
         return fast;
     }
 
+    public boolean isFast(Car c) {
+        return fast;
+    }
+
     public void setFast(boolean fast) {
         this.fast = fast;
     }

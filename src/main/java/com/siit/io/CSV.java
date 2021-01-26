@@ -37,19 +37,19 @@ public class CSV {
 
         writer.flush();
 
-        List<Employee> employees = Files.lines(file.toPath())
-                                        .skip(1) //skip header
-                                        .filter(StringUtils::isNotBlank)
-                                        .map(CSV::mapLineToEmployee)
-                                        .peek(System.out::println)
-                                        .collect(Collectors.toList());
-//        List<Employee> employees = Files.readAllLines(file.toPath())
-//                                        .stream()
+//        List<Employee> employees = Files.lines(file.toPath())
 //                                        .skip(1) //skip header
 //                                        .filter(StringUtils::isNotBlank)
 //                                        .map(CSV::mapLineToEmployee)
 //                                        .peek(System.out::println)
 //                                        .collect(Collectors.toList());
+        List<Employee> employees = Files.readAllLines(file.toPath())
+                                        .stream()
+                                        .skip(1) //skip header
+                                        .filter(s -> StringUtils.isNotBlank(s))
+                                        .map(CSV::mapLineToEmployee)
+                                        .peek(System.out::println)
+                                        .collect(Collectors.toList());
     }
 
     // singleton design pattern
