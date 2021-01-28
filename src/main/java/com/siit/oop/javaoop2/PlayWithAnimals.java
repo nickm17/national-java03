@@ -15,6 +15,12 @@ public class PlayWithAnimals {
             animal.eat();
         }
 
+        Cat cat = new Cat();
+        cat.defaultMethodInInterface();
+        Domestic.staticMethodInInterface();
+
+
+
         Dog dogReference = new Beagle();
         Animal animalDogReference = dogReference; // cast automat, compilatorul stie ca Animal e superclasa
 

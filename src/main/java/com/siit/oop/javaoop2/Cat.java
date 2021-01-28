@@ -29,4 +29,9 @@ public class Cat extends Animal implements Domestic {
     public void play() {
         System.out.println("playing with Cat");
     }
+
+    @Override
+    public void defaultMethodInInterface() {
+        System.out.println("nu dorim comportamentul default, vrem altul pentru cat");
+    }
 }

@@ -21,18 +21,32 @@ public class StreamExamples {
 
     public static void main(String[] args) {
 
-        Transaction transaction1 = new Transaction(1000, 2021);
-        Transaction transaction2 = new Transaction(1500, 2021);
-        Transaction transaction3 = new Transaction(100, 2020);
-//        Transaction transaction4 = new Transaction(100, 2020);
-        Transaction transaction5 = new Transaction(1200, 2021);
-        Transaction transaction4 = new Transaction(1200, 2021);
-        Transaction transaction6 = new Transaction(1300, 2021);
+        Trader raoul = new Trader("Raoul", "Camridge");
+        Trader mario = new Trader("Mario", "Milan");
+        Trader alan = new Trader("Alan", "Cambridge");
+        Trader brian = new Trader("Brian", "Cambidge");
 
-        Stream.of(transaction1, transaction2, transaction3, transaction5, transaction6, transaction4)
+        Transaction transaction1 = new Transaction(1000, 2021, raoul);
+        Transaction transaction2 = new Transaction(1500, 2021, mario);
+        Transaction transaction3 = new Transaction(100, 2020, alan);
+//        Transaction transaction4 = new Transaction(100, 2020);
+        Transaction transaction5 = new Transaction(1200, 2021, brian);
+        Transaction transaction4 = new Transaction(1200, 2021, raoul);
+        Transaction transaction6 = new Transaction(1300, 2021, brian);
+
+        Comparator<Transaction> comparator = Comparator.comparingInt(Transaction::getValue);
+        Comparator<Transaction> comparator2 = (tr1, tr2) -> tr1.getValue() - tr2.getValue();
+        comparator.compare(transaction1, transaction2);
+
+
+        Transaction[] transactions = {transaction1, transaction2, transaction3, transaction5, transaction6, transaction4};
+        Stream.of(transactions)
               .filter(transaction -> transaction.getYear() == 2021)
               .distinct()
+//              .sorted()
+              .sorted((tr1, tr2) -> tr1.getValue() - tr2.getValue())
               .sorted(Comparator.comparingInt(Transaction::getValue))
+              .sorted(comparator2)
               .forEach(System.out::println);
 
 //                                                  .collect(Collectors.toList());
@@ -40,6 +54,13 @@ public class StreamExamples {
 
 
 //              .sorted((tr1, tr2) -> tr1.getValue() - tr2.getValue())
+
+
+            Stream.of(transactions)
+                  .filter(transaction -> transaction.getTrader().getCity().equals("Cambridge"))
+                  .mapToInt(transaction -> transaction.getValue())
+                  .forEach(value -> System.out.println(value));
+//                  .forEach(transaction -> System.out.println(transaction.getValue()));
 
 
     }

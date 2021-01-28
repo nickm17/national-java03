@@ -16,6 +16,8 @@ public class ExempleSupplier {
         Supplier<Car> supplierImpl = new SupplierImpl();
 
 
+        supplier.get();
+
         oMetodaCarePrimesteUnSupplier(() -> new Car());
         oMetodaCarePrimesteUnSupplier(new SupplierImpl());
 

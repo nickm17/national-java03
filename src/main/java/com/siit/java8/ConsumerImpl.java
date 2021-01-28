@@ -15,5 +15,7 @@ public class ConsumerImpl implements Consumer<String> {
 
     public static void main(String[] args) {
 
+        Consumer<Integer> consumer = (a) -> System.out.println(a);
+        consumer.accept(1);
     }
 }
