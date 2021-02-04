@@ -40,8 +40,13 @@ public class ConcurrencyExamples {
 
 
         Thread threadClasaAnonima = new Thread(runnableClasaAnonima);
+        threadClasaAnonima.setName("threadClasaAnonima");
         Thread labmdaCreatedThread = new Thread(runnableLambda);
+        labmdaCreatedThread.setName("labmdaCreatedThread");
         Thread labmdaCreatedThread2 = new Thread(runnableLambda);
+
+        threadClasaAnonima.start();
+        labmdaCreatedThread.start();
 
     }
 

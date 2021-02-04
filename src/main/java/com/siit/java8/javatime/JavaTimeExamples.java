@@ -17,6 +17,8 @@ public class JavaTimeExamples {
     public static void main(String[] args) {
 //        Year.MIN_VALUE;
 
+        LocalDate.now();
+
         System.out.println(LocalDate.of(1999 , 8 , 1));
         System.out.println(LocalDate.of(1999 , 8 , 1).getDayOfWeek());
         System.out.println(LocalDate.of(-1 , 1 , 1).getDayOfWeek());
@@ -27,8 +29,10 @@ public class JavaTimeExamples {
         System.out.println(LocalDateTime.of(1999, 8, 10 , 10 , 10));
 
 
-        String localDateString = "1999-10/10";
+        String localDateString = "1999/10/10";
         String localDateTimeString = "1999/10/10 11:11";
+
+        LocalDate parse = LocalDate.parse(localDateString, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
