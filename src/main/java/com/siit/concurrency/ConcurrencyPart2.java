@@ -27,10 +27,15 @@ public class ConcurrencyPart2 {
         thread5.start();
         thread4.start();
 
-        thread5.join();
+        thread1.join();// main asteapta sa termine thread1 / waits until thread1 dies
+        thread2.join();
+        thread3.join();
+        thread4.join();
+//        thread5.join();
 
         int sum = runnableRamdom1.result[0] + runnableRamdom2.result[0] + runnableRamdom3.result[0]+ runnableRamdom4.result[0] +runnableRamdom5.result[0];
         System.out.println(sum);
+        System.out.println(runnableRamdom1.resultAtomic.get());
 
         Arrays.asList(1,2,3,4,5,6)
               .parallelStream()
