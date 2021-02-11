@@ -4,7 +4,7 @@ SELECT * FROM db_licenta.utilizatori; /* dfsdfsd*/
 CREATE SCHEMA books;
 USE books;
 
-create table authors (id int(3), name varchar(64), email varchar(64));
+CREATE TABLE IF NOT EXISTS authors (id int(3), name varchar(64), email varchar(64));
 show tables;
 describe authors;
 insert into authors (id, name, email) values (1, 'Georgel Ionescu', 'georgel.ionescu@gmail.com');
