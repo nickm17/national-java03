@@ -66,6 +66,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
             int affectedRows = preparedStatement.executeUpdate();
 
+//            boolean isREsultSet =  preparedStatement.execute();
+//            if (isREsultSet){
+//                preparedStatement.getResultSet();
+//            } else {
+////                preparedStatement.
+//            }
+
             System.out.println(affectedRows);
 
         } catch (SQLException ex) {
